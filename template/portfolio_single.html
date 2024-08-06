@@ -1,0 +1,174 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock title %}
+{% block content %}
+
+
+
+        
+        <!-- site-main -->
+        <div id="main" class="site-main">
+        
+        
+        
+        	            
+            <!-- primary -->
+        	<div id="primary" class="content-area">
+            	
+                <!-- site-content -->
+                <div id="content" class="site-content" role="main">
+                
+                
+                
+                
+                	
+                    
+                    <!-- InstanceBeginEditable name="FeaturedContent" -->
+					
+					
+					<!-- InstanceEndEditable -->
+                	
+                    
+                    
+                    <!-- layout-medium -->
+                	<div class="layout-medium">
+                    
+                    
+                    
+						<!-- InstanceBeginEditable name="LayoutMediumContent" -->
+                
+                	
+                    
+                        <!-- .hentry -->
+                        <article class="hentry type-portfolio">
+                            
+                     
+                            <header class="entry-header">
+                                                                   
+                                <h1 class="entry-title">Read</h1>
+                                
+                                <!-- HEADER LINKS -->
+                                <ul class="header-links">
+                                  <li><a href="{% url 'portfolio-page'%}"><i class="pw-icon-level-up"></i> Back to Portfolio</a></li>
+                                </ul>
+                                <!-- HEADER LINKS -->
+                                
+                            </header>
+                            
+                        
+                        
+                            <!-- .entry-content -->
+                            <div class="entry-content">
+                                
+                                <p>Photographer is a responsive WordPress theme created for creative Photographers with a minimalist design and optimized for mobile. It is clean, minimalist, content-focused and responsive. It looks great on every device. Your readers will enjoy reading your blog.</p>
+                                
+                              
+                                <!-- row -->
+                                <div class="row">
+                                
+                                    <!-- column 6/12 -->
+                                    <div class="col-sm-6">
+                                        <h2 class="section-title">Launch Project</h2>
+                                        <p><a class="button" target="_blank" href="http://themes.pixelwars.org/?theme=photographer">Launch Project</a></p>
+                                    </div>
+                                    <!-- column 6/12 -->
+                                    
+                                    <!-- column 6/12 -->
+                                    <div class="col-sm-6">
+                                        <h2 class="section-title">Client</h2>
+                                        <p>Wordpress Users</p>
+                                    </div>
+                                    <!-- column 6/12 -->
+                                  
+                                </div>
+                                <!-- row -->
+                                
+                                <p>
+                                	<a href="{% static 'images/portfolio/single/single-01.jpg'%}"><img src="{% static 'images/portfolio/single/single-01.jpg'%}" alt="image"/></a>
+                                </p>
+                                
+                                <p>
+                                	<a href="{% static 'images/portfolio/single/single-02.jpg'%}"><img src="{% static 'images/portfolio/single/single-02.jpg'%}" alt="image"/></a>
+                                </p>
+                                
+                                                                
+                                <!-- .gallery -->	
+                                <div class="gallery gallery-columns-2 gallery-size-thumbnail">
+                                    
+                                    <figure class="gallery-item">
+                                        <div class="gallery-icon landscape">
+                                            <a href="{% static 'images/portfolio/single/single-03.jpg' %}"><img width="150" height="150" src="{% static 'images/portfolio/single/single-03.jpg' %}" class="attachment-thumbnail" alt="Golden Gate Bridge"></a>
+                                        </div>
+                                   </figure>
+                                       
+                                   <figure class="gallery-item">
+                                        <div class="gallery-icon landscape">
+                                            <a href="{% static 'images/portfolio/single/single-04.jpg' %}"><img width="150" height="150" src="{% static 'images/portfolio/single/single-04.jpg' %}" class="attachment-thumbnail" alt="Golden Gate Bridge"></a>
+                                        </div>
+                                   </figure>
+                                       
+                                </div>
+                                <!-- .gallery -->	
+                                    
+                                    
+                                
+                                <!-- .media-wrap -->
+                                <div class="media-wrap">                                  
+                                    <iframe src="http://player.vimeo.com/video/93094247?title=0&amp;byline=0&amp;portrait=0&amp;color=AB977A" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                                <!-- .media-wrap -->
+                                
+                            
+                            </div>
+                            <!-- .entry-content -->
+                            
+                            
+                            
+                            <!-- .nav-single -->
+                            <nav class="nav-single row">
+                            
+                                <div class="nav-previous col-sm-6">
+                                    <h4>PREVIOUS PROJECT</h4>
+                                    <a href="{% url 'portfolio_single-page'%}" rel="prev"><span class="meta-nav">←</span> Game Characters</a>
+                                </div>
+                                
+                                <div class="nav-next col-sm-6">
+                                    <h4>NEXT PROJECT</h4>
+                                    <a href="{% url 'portfolio_single-page'%}" rel="next">Retro Logos And Badges <span class="meta-nav">→</span></a>
+                                </div>
+                                
+                            </nav>
+                            <!-- .nav-single --> 
+                         
+                            
+                        
+                        </article>
+                        <!-- .hentry -->
+
+                    
+                    
+                
+                		<!-- InstanceEndEditable -->
+                    	
+                        
+                    	
+                    </div>
+                    <!-- layout-medium -->
+                    
+                    
+                
+                
+                	
+                
+                </div>
+                <!-- site-content -->
+                
+            </div>
+            <!-- primary -->    
+        
+        
+        
+        
+        </div>
+        <!-- site-main -->
+        {% endblock content %}

@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock title %}
+{% block content %}
+
+
+
+
+    
+        
+        
+        
+        
+        <!-- site-main -->
+        <div id="main" class="site-main">
+        
+        
+        
+        	            
+            <!-- primary -->
+        	<div id="primary" class="content-area">
+            	
+                <!-- site-content -->
+                <div id="content" class="site-content" role="main">
+                
+                
+                
+                
+                	
+                    
+                    <!-- InstanceBeginEditable name="FeaturedContent" -->
+					
+                    					
+					<!-- InstanceEndEditable -->
+                	
+                    
+                    
+                    <!-- layout-medium -->
+                	<div class="layout-medium">
+                    
+                    
+                    
+						<!-- InstanceBeginEditable name="LayoutMediumContent" -->
+                		
+                        
+                        <!-- entry-header -->
+                        <header class="entry-header">
+                        	<h1 class="entry-title">LATEST STORIES</h1>
+                        </header>
+                        <!-- entry-header -->
+                        
+                
+                
+                    	<!-- BLOG MASONRY -->
+                        <div class="masonry blog-masonry" data-layout="masonry" data-item-width="340">
+                            
+                            
+                            
+                            
+                            
+                            {% for blog in blogs %}
+                            <!-- .hentry -->
+                            <article class="hentry post">
+                            
+                                <!-- .featured-image -->
+                                <div class="featured-image">
+                                    <a href="{% url 'blog-single-page' blog.pk %}"><img src="{{blog.image.url}}" alt="blog-image"></a>
+                                </div>
+                                <!-- .featured-image -->
+                                
+                                
+                                <!-- .entry-header -->
+                                <header class="entry-header">
+                                    
+                                    <!-- .entry-title -->
+                                    <h1 class="entry-title"><a href="{% url 'blog-single-page' blog.pk %}">{{blog.title}}</a></h1>
+                                    
+                                    
+                                    <!-- .entry-meta -->
+                                    <div class="entry-meta">
+                                        <span class="entry-date">
+                                            <time class="entry-date" >{{blog.created_date}}</time>
+                                            <a href="{% url 'blog-single-page' blog.pk %}#comments">124 Comments</a>
+                                        </span> 
+                                    
+                                        <span class="cat-links">
+                                            <a href="#" title="View all posts in Adventure" rel="category tag">{{blog.category}}</a>
+                                        </span>	
+                                    </div>
+                                    <!-- .entry-meta -->
+                                    
+                                    
+                                </header>
+                                <!-- .entry-header -->
+                                
+                                <!-- .entry-content -->
+                                <div class="entry-content">
+                                                                    
+                                	<p>{{blog.content| safe | truncatewords:20}} </p>
+                                    <span >
+                                        <a href="{% url 'blog-single-page' blog.pk %}" class="more-link">Continue reading <span class="meta-nav">→</span></a>
+                                    </span>
+                                   
+                                </div>
+                                <!-- .entry-content -->
+                                
+                                
+                            </article>
+                            <!-- .hentry -->
+                            {% endfor %}
+                            
+                            
+                            
+                            
+                            
+                                                          
+                          
+                        </div>
+                        <!-- BLOG MASONRY -->
+               
+                    	
+                            
+                        
+                        <!-- .navigation .pagination -->
+                        <nav class="navigation pagination" role="navigation">
+                            
+                            <h2 class="screen-reader-text">Posts navigation</h2>
+                            
+                            <!-- .nav-links -->
+                            <div class="nav-links">
+                                <a class="page-numbers prev" href="#">Prev</a>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>1</a>
+                                <span class="page-numbers dots">…</span>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>4</a>
+                                <span class="page-numbers current"><span class="meta-nav screen-reader-text">Page </span>5</span>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>6</a>
+                                <span class="page-numbers dots">…</span>
+                                <a class="page-numbers" href="#"><span class="meta-nav screen-reader-text">Page </span>8</a>
+                                <a class="page-numbers next" href="#">Next</a>
+                            </div> 
+                            <!-- .nav-links -->
+                            
+                        </nav> 
+                        <!-- .navigation .pagination -->
+              
+                                    
+                <!-- InstanceEndEditable -->
+                    	
+                        
+                    	
+                    </div>
+                    <!-- layout-medium -->
+                    
+                    
+                
+                
+                	
+                
+                </div>
+                <!-- site-content -->
+                
+            </div>
+            <!-- primary -->    
+        
+        
+        
+        
+        </div>
+        <!-- site-main -->
+        {% endblock content %}
+
+
+
+
+       
