@@ -30,24 +30,13 @@ def index_view(request):
  return render(request,'index.html')
 
 
-def About_view(request):
-    about =About.objects.all()
-    context = {
-       "about" :about,
-    }
-    return render(request,'about.html', context)
 
 
+class AboutListView(ListView):
+    model = About
+    template_name = 'about.html'
+    context_object_name = 'about'
 
-
-
-# def Gallery_view(request):
-#     gallery = Gallery.objects.all()
-#     context = {
-#         "gallery":gallery,
-#     }
-
-#     return render(request, 'Gallery.html',context)
 
 
 class GalleryListView(ListView):
