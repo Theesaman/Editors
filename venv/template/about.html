@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About Me {% endblock title %}
+{% block content %}
+    <!-- site-main -->
+    <div id="main" class="site-main">
+        <div id="primary" class="content-area">
+            <!-- site-content -->
+            <div id="content" class="site-content" role="main">
+                <div class="layout-medium">
+                    <article class="hentry page">
+                        <!-- .entry-header -->   
+                        <header class="entry-header">
+                            <h1 class="entry-title">About Me</h1>
+                        </header>
+                        <!-- .entry-header -->   
+                        
+                        <!-- .entry-content -->
+                        <div class="entry-content">
+                            {% for item in about %}
+                            <p>
+                                <a href="#" target="_blank">
+                                    <img src="{{ item.image.url }}" alt="profile photo">
+                                </a>
+                            </p>
+                            
+                            <h2 class="section-title center">{{ item.title }}</h2>
+                            
+                            <p>{{ item.description }}</p>
+                            
+                            <h2 class="section-title center">{{ item.created_date }}</h2>
+                            <!-- qolgani shu yerda -->
+                            {% endfor %}
+                        </div>
+                        <!-- .entry-content -->
+                    </article>
+                    <!-- .hentry -->
+                </div>
+                <!-- layout-medium -->
+            </div>
+            <!-- site-content -->
+        </div>
+        <!-- primary -->    
+    </div>
+    <!-- site-main -->
+{% endblock content %}
