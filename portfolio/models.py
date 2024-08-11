@@ -1,7 +1,5 @@
 from django.db import models
 from ckeditor.fields import RichTextField
-from hitcount.models import HitCountMixin,HitCount
-from django.contrib.contenttypes.fields import GenericRelation
 from django.utils.text import slugify
 from ckeditor.fields import RichTextField
 
@@ -90,15 +88,6 @@ class Books(models.Model):
 
     def __str__(self):
         return self.title
-
-class About(models.Model):
-    image = models.ImageField(upload_to='Images/about', default='Images/about/default_image.jpg')
-    title = models.CharField(max_length=100)
-    description = models.TextField()
-    created_date = models.DateTimeField(auto_now=True)
-    def __str__(self):
-        return self.title
-    
 
 
 class Portfolio_Single(models.Model):

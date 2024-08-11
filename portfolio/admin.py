@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib import admin
-from .models import Contact,Portfolio,Blog,Comment,Category,Gallery,Books,About,PortfolioCategory,Portfolio_Single,GalleryCategory
+from .models import Contact,Portfolio,Blog,Comment,Category,Gallery,Books,PortfolioCategory,Portfolio_Single,GalleryCategory
 from django.utils.html import format_html
 # Register your models here.
 
@@ -72,11 +72,6 @@ class GalleryAdmin(admin.ModelAdmin):
  
     
 
-@admin.register(About)
-class AboutAdmin(admin.ModelAdmin):
-    list_display = ('img','title' ,'description', 'created_date')
-    readonly_fields = ['id']
-    def img(self, obj):
-         return format_html('<img width="100" height="100" src="{}" style="border-radius: 50%;"/>'.format(obj.image.url))
+
   
 

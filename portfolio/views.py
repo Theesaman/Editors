@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Contact,Gallery,Blog,Books,Portfolio,About,PortfolioCategory,Portfolio_Single,Blog,Comment,Category,GalleryCategory
+from .models import Contact,Gallery,Blog,Books,Portfolio,PortfolioCategory,Portfolio_Single,Blog,Comment,Category,GalleryCategory
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -28,16 +28,6 @@ class ContactFormView(FormView):
 
 def index_view(request):
  return render(request,'index.html')
-
-
-
-
-class AboutListView(ListView):
-    model = About
-    template_name = 'about.html'
-    context_object_name = 'about'
-
-
 
 class GalleryListView(ListView):
     model = Gallery
@@ -138,3 +128,5 @@ class BlogDetailView(DetailView):
     
 
 
+def about_view(request):
+    return render(request,'about.html')

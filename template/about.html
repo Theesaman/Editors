@@ -17,20 +17,17 @@
                         
                         <!-- .entry-content -->
                         <div class="entry-content">
-                            {% for item in about %}
+
                             <p>
                                 <a href="#" target="_blank">
-                                    <img src="{{ item.image.url }}" alt="profile photo">
+                                    <img src="{% static 'images/home/photo_2024-08-10_18-13-35.jpg' %}" alt="profile photo">
                                 </a>
                             </p>
                             
-                            <h2 class="section-title center">{{ item.title }}</h2>
+                            <h2 class="section-title center">Samandar Maxmudov</h2>
                             
-                            <p>{{ item.description }}</p>
-                            
-                            <h2 class="section-title center">{{ item.created_date }}</h2>
-                            <!-- qolgani shu yerda -->
-                            {% endfor %}
+                            <p>Samandar Maxmudov 2009 - yilda Navoiy viloyatida tug'ilgan</p>
+
                         </div>
                         <!-- .entry-content -->
                     </article>
